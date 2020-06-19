@@ -1,0 +1,93 @@
+﻿<html lang="tr">
+	<head>
+		<title>Renk Değiştir</title>
+			<link rel="stylesheet" type="text/css" href="js/lightbox/dist/css/lightbox.css">
+			<script src="js/lightbox/dist/js/lightbox.min.js"></script>
+			<meta charset="utf-8">
+			<meta name="keywords" content="dekozensıva,dekozensiva,sıva,siva,boyalısıva,boyalisiva,boyalısiva,boyalisıva,renklisıva,renklisiva,renklısıva,renklısiva" />
+			<meta name="description" content="Dekozen Sıva inşaatın her alanında kullanılması için ucuz ve kaliteli ayrıca birçok renk seçeneği ile hizmet vermektedir.  " />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+			<script src="http://bxslider.com/lib/jquery.bxslider.js"></script>
+			<link href="http://bxslider.com/lib/jquery.bxslider.css" rel="stylesheet" />
+	</head>
+		<body>
+			<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+				<a class="navbar-brand" href="#"></a>
+		<div class="media-body" margin-top="" style="margin-top: 20px;">
+			<font face="" size="2" color="whitesmoke" > </font>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item ">
+					<input type="button" id="renk" value="Renk Degiş" style="margin:5px">
+					<input type="button" id="renk1" value="Renk Degiş"style="margin:5px">
+					<input type="button" id="renk2" value="Renk Degiş"style="margin:5px">
+				</li>
+			</ul>
+		</div>
+			<div class="media">
+				<div class="media-left">
+					<img class="media-object" src="" style="width:40px height=40px" >
+				</div>
+					<div class="media-body" margin-top="" style="margin-top: 10px;">
+						<font face="" size="4" color="whitesmoke" ></font>
+					</div>
+			</div>  
+			</nav>
+
+
+	<div class="container" style="margin-top:50px;">
+		<div class="row">
+		</div>
+	</div>
+<script>
+var dizi=["#F0F8FF","#F5FFFA","#8B0000","#A0522D","#FFF8DC","#CD853F","#DCDCDC","#F5F5F5",
+		  "#FAEBD7","#FFE4E1","#E9967A","#C0C0C0","#DC143C","#FFC0CB","#F8F8FF","#9ACD32",
+		  "#00FFFF","#FFE4B5","#8FBC8F","#87CEEB","#00FFFF","#DDA0DD","#FFD700","#FFFF00",
+		  "#7FFFD4","#FFDEAD","#483D8B","#6A5ACD","#00008B","#B0E0E6","#DAA520","#20B2AA",
+		  "#F0FFFF","#000080","#2F4F4F","#708090","#008B8B","#800080","#808080","#87CEFA",
+		  "#F5F5DC","#FDF5E6","#2F4F4F","#708090","#B8860B","#663399","#808080","#778899",
+		  "#FFE4C4","#808000","#00CED1","#FFFAFA","#A9A9A9","#FF0000","#008000","#778899",
+		  "#000000","#6B8E23","#9400D3","#00FF7F","#A9A9A9","#BC8F8F","#ADFF2F","#B0C4DE",
+		  "#FFEBCD","#FFA500","#FF1493","#4682B4","#006400","#4169E1","#F0FFF0","#FFFFE0",
+		  "#0000FF","#FF4500","#00BFFF","#D2B48C","#BDB76B","#8B4513","#FF69B4","#00FF00",
+		  "#8A2BE2","#DA70D6","#696969","#008080","#8B008B","#FA8072","#CD5C5C","#32CD32",
+		  "#A52A2A","#EEE8AA","#696969","#D8BFD8","#556B2F","#F4A460","#4B0082","#FAF0E6",
+		  "#DEB887","#98FB98","#1E90FF","#FF6347","#FF8C00","#2E8B57","#FFFFF0","#FF00FF",
+		  "#5F9EA0","#AFEEEE","#B22222","#40E0D0","#9932CC","#FFF5EE","#F0E68C","#800000",
+		  "#D2691E","#DB7093","#FFFAF0","#EE82EE","#E0FFFF","#00FA9A","#E6E6FA","#66CDAA",
+		  "#FF7F50","#FFEFD5","#228B22","#F5DEB3","#FAFAD2","#48D1CC","#FFF0F5","#0000CD",
+		  "#6495ED","#FFDAB9","#FF00FF","#FFFFFF","#D3D3D3","#C71585","#7CFC00","#BA55D3",
+		  "#90EE90","#FFB6C1","#ADD8E6","#3CB371","#D3D3D3","#191970","#FFFACD","#9370DB"];
+var renk=document.getElementById("renk");
+renk.onclick=function(){
+var rasgele=Math.floor(Math.random()*dizi.length);
+document.body.style.backgroundColor=dizi[rasgele];
+}
+var renk1=document.getElementById("renk1");
+renk1.onclick=function(){
+var rasgele=Math.floor(Math.random()*dizi.length);
+document.body.style.backgroundColor=dizi[rasgele];
+}
+var renk2=document.getElementById("renk2");
+renk2.onclick=function(){
+var rasgele=Math.floor(Math.random()*dizi.length);
+document.body.style.backgroundColor=dizi[rasgele];
+}
+</script>
+		</body>
+</html>
+
+
+
+
